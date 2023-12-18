@@ -35,7 +35,7 @@ local function getCommand(c, results)
   table.insert(ret, "--")
   ret = vim.list_extend(ret, args.executableArgs or {})
 
-  return "cargo", ret, dir
+  return "direnv exec . cargo", ret, dir
 end
 
 function M.run_command(choice, result)
